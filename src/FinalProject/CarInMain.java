@@ -20,7 +20,7 @@ public class CarInMain {
             Scanner scanner = new Scanner(System.in);
             System.out.print("Enter username : ");
             String user = scanner.nextLine();
-            System.out.println("Enter your password : ");
+            System.out.print("Enter your password : ");
             String pw = scanner.nextLine();
             if(pw.equals(login.get(user))){
                 System.out.println("Log in successful");
@@ -45,7 +45,7 @@ public class CarInMain {
 
         }
 
-        public static void H(){
+       /* public static void H(){
             File honda = new File("Honda.txt");
             System.out.println(honda.exists());
             try {
@@ -62,7 +62,7 @@ public class CarInMain {
 
                 System.out.println(e.getMessage());;
             }
-        }
+        }*/
         public static void HinMain() {
 
             HondaCarList h = new HondaCarList("", 0, 0);
@@ -116,7 +116,6 @@ public class CarInMain {
 
             if( choice == 1){
                 HinMain();
-                //H();
             }else if(choice == 2){
                 TinMain();
             } else if (choice == 3) {
