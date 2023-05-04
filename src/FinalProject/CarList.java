@@ -8,35 +8,26 @@ public class CarList {
     public double price;
     public CarList(){
 
-
-
-
     }
     public CarList(String model , int seat , double price) {
         this.model = model;
         this.seat = seat;
         this.price = price;
     }
-
-
-
-
 }
 class HondaCarList extends CarList {
-    Collection<CarList> honda;
-
-
-
+    List<HondaCarList> honda;
 
     public HondaCarList(String model, int seat, double price) {
         super(model, seat, price);
     }
-    public void HondaI(){
+
+    public void HondaI() {
         honda = new Vector<>();
         honda.add(new HondaCarList("Civic\t", 5, 1100));
-        honda.add(new HondaCarList("Accord\t", 5, 100));
-        honda.add(new HondaCarList("HR-V\t", 5, 900));
-        honda.add(new HondaCarList("CR-V\t", 5, 900));
+        honda.add(new HondaCarList("Accord\t", 5, 1000));
+        honda.add(new HondaCarList("HR-V\t", 5, 1000));
+        honda.add(new HondaCarList("CR-V\t", 5, 1000));
         honda.add(new HondaCarList("Pilot\t", 7, 1500));
         honda.add(new HondaCarList("Odyssey", 7, 1500));
         honda.add(new HondaCarList("Ridgeline", 5, 1000));
@@ -44,9 +35,6 @@ class HondaCarList extends CarList {
         honda.add(new HondaCarList("Clarity", 5, 1000));
         honda.add(new HondaCarList("Passport", 5, 1000));
     }
-
-
-
 
     public void hondaCar() {
         int i = 1 ;
@@ -57,20 +45,12 @@ class HondaCarList extends CarList {
     }
 }
 class ToyotaCarList extends CarList {
-    Collection<CarList> toyota;
-
-
-
-
+    List<CarList> toyota;
     public ToyotaCarList(String model, int seat, double price) {
         super(model, seat, price);
     }
     public void ToyotaI(){
-        toyota = new Vector<>();
-
-
-
-
+        toyota = new ArrayList<>();
         toyota.add(new ToyotaCarList("Corolla", 5, 1200));
         toyota.add(new ToyotaCarList("Camry\t", 5, 1100));
         toyota.add(new ToyotaCarList("RAV4\t", 5, 1000));
@@ -82,44 +62,25 @@ class ToyotaCarList extends CarList {
         toyota.add(new ToyotaCarList("Prius\t", 5, 1000));
         toyota.add(new ToyotaCarList("C-HR\t", 5, 1000));
     }
-
-
-
-
     public void ToyotaCar() {
         int i =1;
         for (CarList c : toyota) {
             System.out.println( i + "\tToyota : " + c.model + "\t\tseat: " + c.seat + "\t\tprice per day : " + c.price);
             i++;
         }
-
-
-
-
-
-
-
-
     }
-
-
-
-
 }
 class SuzukiCarList extends CarList {
-    Collection<CarList> suzuki;
-
-
-
+    List<CarList> suzuki;
 
     public SuzukiCarList(String model, int seat, double price) {
         super(model, seat, price);
     }
     public void SuzukiI(){
-        suzuki = new Vector<>();
+        suzuki = new ArrayList<>();
         suzuki.add(new SuzukiCarList("Swift\t", 5, 1000));
         suzuki.add(new SuzukiCarList("Vitara", 5, 1100));
-        suzuki.add(new SuzukiCarList("Jimny\t", 4, 900));
+        suzuki.add(new SuzukiCarList("Jimny\t", 4, 1000));
         suzuki.add(new SuzukiCarList("Baleno", 5, 1000));
         suzuki.add(new SuzukiCarList("Celerio", 5, 1000));
         suzuki.add(new SuzukiCarList("Ignis\t", 5, 1000));
@@ -129,40 +90,21 @@ class SuzukiCarList extends CarList {
         suzuki.add(new SuzukiCarList("Ertiga", 7, 1500));
     }
 
-
-
-
     public void SuzukiCar() {
         int i = 1;
         for (CarList c : suzuki) {
             System.out.println( i + "\tSuzuki : " + c.model + " \tseat: " + c.seat + "\t\tprice per day : " + c.price);
             i++;
         }
-
-
-
-
     }
-
-
-
-
 }
 class BMWCarList extends CarList {
-    Collection<CarList> bmw;
-
-
-
-
-
-
-
-
+    List<CarList> bmw;
     public BMWCarList(String model, int seat, double price) {
         super(model, seat, price);
     }
     public void BMWI(){
-        bmw = new Vector<>();
+        bmw = new ArrayList<>();
         bmw.add(new BMWCarList("3-series", 5, 1200));
         bmw.add(new BMWCarList("5-series", 5, 1500));
         bmw.add(new BMWCarList("X1\t", 5, 1400));
@@ -176,8 +118,6 @@ class BMWCarList extends CarList {
     }
 
 
-
-
     public void BMWCar() {
         int i = 1;
         for (CarList c : bmw) {
@@ -185,30 +125,16 @@ class BMWCarList extends CarList {
             i++;
         }
 
-
-
-
-
-
-
-
     }
-
-
-
 
 }
 class MitsubishiCarList extends CarList {
-    Collection<CarList> mitsubishi;
-
-
-
-
+    List <CarList> mitsubishi;
     public MitsubishiCarList(String model, int seat, double price) {
         super(model, seat, price);
     }
     public void MitsubishiI(){
-        mitsubishi = new Vector<>();
+        mitsubishi = new ArrayList<>();
         mitsubishi.add(new MitsubishiCarList("Mirage\t\t\t", 5, 1200));
         mitsubishi.add(new MitsubishiCarList("Eclipse\t\t", 5, 1000));
         mitsubishi.add(new MitsubishiCarList("Outlander\t\t", 7, 1600));
@@ -217,13 +143,9 @@ class MitsubishiCarList extends CarList {
         mitsubishi.add(new MitsubishiCarList("Pajero\t\t\t", 7, 1600));
         mitsubishi.add(new MitsubishiCarList("Lancer\t\t\t", 5, 1200));
         mitsubishi.add(new MitsubishiCarList("Galant\t\t\t", 5, 1100));
-        mitsubishi.add(new MitsubishiCarList("i-MiEV\t\t\t", 4, 800));
+        mitsubishi.add(new MitsubishiCarList("i-MiEV\t\t\t", 4, 1000));
         mitsubishi.add(new MitsubishiCarList("Trito\t\t\t", 5, 1000));
     }
-
-
-
-
     public void MitsubishiCar() {
         int i = 1;
         for (CarList c : mitsubishi) {
@@ -231,6 +153,4 @@ class MitsubishiCarList extends CarList {
             i++;
         }
     }
-
-
 }
