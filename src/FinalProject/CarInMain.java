@@ -3,23 +3,19 @@ package FinalProject;
 import java.util.*;
 import static FinalProject.CarFile.*;
 import static FinalProject.RentalInfo.back;
-
 public class CarInMain {
-
     public static class carInMain {
         public static Hashtable<String,String> login = new Hashtable<>();
         static String password ;
         static String username ;
 
         public static void HinMain() {
-
             HondaCarList h = new HondaCarList("", 0, 0);
             h.HondaI();
             h.hondaCar();
         }
 
         public static void TinMain() {
-
             ToyotaCarList t = new ToyotaCarList("", 0, 0.00);
             t.ToyotaI();
             t.ToyotaCar();

@@ -23,7 +23,7 @@ class HondaCarList extends CarList {
     }
 
     public void HondaI() {
-        honda = new Vector<>();
+        honda = new ArrayList<>();
         honda.add(new HondaCarList("Civic\t", 5, 1100));
         honda.add(new HondaCarList("Accord\t", 5, 1000));
         honda.add(new HondaCarList("HR-V\t", 5, 1000));
