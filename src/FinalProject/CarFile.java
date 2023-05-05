@@ -15,7 +15,7 @@ public class CarFile {
 
         try {
             File f = new File("D:\\FinalProject\\OODP Project\\src\\FinalProject\\Honda.txt");
-            BufferedReader file = new BufferedReader(new FileReader("f"));
+            BufferedReader file = new BufferedReader(new FileReader(f));
             int i = 0;String line = "line";
             while( i < choose){
                 line = file.readLine();

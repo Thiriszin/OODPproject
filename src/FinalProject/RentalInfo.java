@@ -22,8 +22,11 @@ public class RentalInfo {
             int rule = scanner.nextInt();
             if (rule == 1) {
                 Continue();
-            }else{
+            }else if(rule==2){
                 System.out.println("We respect your choice ...");
+            }
+            else{
+                System.out.println("Please select 1 or 2.");
                 rule();
             }
         }catch(NumberFormatException e){
